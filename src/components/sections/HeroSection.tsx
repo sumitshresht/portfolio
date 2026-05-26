@@ -158,7 +158,7 @@ export default function HeroSection() {
           </a>
 
           <a 
-            href="https://drive.google.com/file/d/16Gb9bhUn_-MuIFtVRTji1DkYwhyLHDt6/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1ubmETmnQip86mxuzUY0bU82qxGXm1KE4/view?usp=sharing" 
             target="_blank" 
             rel="noreferrer" 
             className="relative group px-8 py-3.5 bg-canvas rounded-xl text-xs font-mono text-gray-400 shadow-neu-inset border border-magic-glow/30 hover:border-magic-glow hover:text-white transition-all duration-300 flex items-center gap-2 overflow-hidden cursor-pointer"
