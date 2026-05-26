@@ -1,4 +1,5 @@
 "use client";
+
 import React from 'react';
 import { Mail, Send } from 'lucide-react';
 import CinematicSection from '@/components/CinematicSection';
@@ -13,9 +14,9 @@ export default function ContactSection() {
             <Send size={24} className="text-magic-glow" />
           </div>
           <div>
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Let's build scalable systems together.</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Let&apos;s build scalable systems together.</h3>
             <p className="text-gray-400 text-sm leading-relaxed max-w-md mx-auto">
-              I’m always interested in backend engineering, developer tooling, scalable architectures, and impactful software projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+              I&apos;m always interested in backend engineering, developer tooling, scalable architectures, and impactful software projects. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
             </p>
           </div>
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">

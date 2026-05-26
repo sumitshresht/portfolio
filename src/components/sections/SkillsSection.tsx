@@ -5,8 +5,14 @@ import { motion, useInView } from 'framer-motion';
 import { Cpu } from 'lucide-react';
 import CinematicSection from '@/components/CinematicSection';
 
-// Extract the mapped item into its own component to safely use Hooks!
-const SkillBlock = ({ block, index }: { block: any, index: number }) => {
+// Strict Type definition to fix the "Unexpected any" error
+type SkillBlockType = {
+  category: string;
+  tech: string[];
+};
+
+// Removed the unused 'index' prop
+const SkillBlock = ({ block }: { block: SkillBlockType }) => {
   const blockRef = useRef(null);
   const isBlockInView = useInView(blockRef, { margin: "-20% 0px -20% 0px" });
 
@@ -66,7 +72,7 @@ export default function SkillsSection() {
     <CinematicSection id="skills" title="Technical Skills" icon={Cpu}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
         {blocks.map((block, i) => (
-          <SkillBlock key={i} block={block} index={i} />
+          <SkillBlock key={i} block={block} />
         ))}
       </div>
     </CinematicSection>

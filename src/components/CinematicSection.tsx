@@ -1,9 +1,20 @@
 "use client";
+
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Power } from 'lucide-react';
 
-export default function CinematicSection({ children, title, icon: Icon, id }: { children: React.ReactNode, title: string, icon: any, id: string }) {
+export default function CinematicSection({ 
+  children, 
+  title, 
+  icon: Icon, 
+  id 
+}: { 
+  children: React.ReactNode, 
+  title: string, 
+  icon: React.ElementType, 
+  id: string 
+}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-30% 0px -30% 0px" });
   

@@ -1,7 +1,9 @@
 "use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen } from 'lucide-react';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import CinematicSection from '@/components/CinematicSection';
 
@@ -17,10 +19,18 @@ export default function BlogSection() {
         {blogs.map((blog, i) => (
           <motion.a key={i} href={blog.link} target="_blank" rel="noreferrer" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, delay: i * 0.1 }} className={cn("block group relative bg-surface p-4 rounded-[2rem] shadow-neu-dark border border-white/5 transition-all duration-500 hover:-translate-y-2 overflow-hidden flex flex-col h-full", blog.glow)}>
             <div className="absolute inset-0 bg-gradient-to-br from-magic-glow/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+            
             <div className="relative w-full h-52 md:h-60 rounded-2xl overflow-hidden bg-[#050505] border border-white/5 mb-6">
               <div className="absolute inset-0 bg-canvas/40 group-hover:bg-transparent transition-colors duration-700 z-10 pointer-events-none" />
-              <img src={blog.image} alt={blog.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <Image 
+                src={blog.image} 
+                alt={blog.title} 
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-1000 group-hover:scale-110" 
+              />
             </div>
+
             <div className="flex flex-col flex-grow px-2 relative z-20 pb-2">
               <span className="text-[10px] font-mono tracking-widest uppercase text-gray-400 border border-white/10 bg-white/5 px-3 py-1.5 rounded-lg inline-flex w-max mb-5 shadow-neu-inset group-hover:text-gray-300 transition-colors">{blog.category}</span>
               <h3 className={cn("text-xl font-bold text-white transition-colors duration-500 leading-snug mb-8", blog.textHover)}>{blog.title}</h3>
