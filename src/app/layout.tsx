@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-// @ts-ignore: Allow side-effect CSS import without type declarations
 import "./globals.css";
-import Navigation from "@/components/Navigation"; // Ensure this path matches
+import Navigation from "@/components/Navigation"; 
 
 export const metadata: Metadata = {
   title: "Sumit Shresht | Backend Engineer",
-  description: "Engineering scalable backend systems and developer tools.",
+  description: "Crafting resilient backends & intelligent systems.",
 };
 
 export default function RootLayout({
@@ -14,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className="bg-[#0a0a0c] text-gray-300 antialiased overflow-x-hidden">
         <Navigation />
         {children}
