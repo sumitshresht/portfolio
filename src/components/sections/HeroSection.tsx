@@ -124,7 +124,8 @@ export default function HeroSection() {
         {/* TYPEWRITER & GLITCH GREETING */}
         <div className="flex items-center justify-center text-xl md:text-3xl font-mono text-gray-400 mb-6 h-10 select-none">
           <span className="text-magic-glow min-w-[70px] md:min-w-[100px] text-right">{greetingText}</span>
-          <span className="mx-2">, I'm</span>
+          {/* ESCAPED APOSTROPHE HERE */}
+          <span className="mx-2">, I&apos;m</span>
           <span className="font-bold glitch-name text-white" data-text="Sumit">Sumit</span>
           <span className="w-2.5 md:w-3.5 h-6 md:h-8 bg-magic-glow animate-pulse ml-2" /> {/* Blinking Terminal Cursor */}
         </div>
@@ -143,9 +144,10 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-br from-magic-glow/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
           <p className="text-xs md:text-sm text-gray-400 font-mono leading-loose relative z-10">
             <span className="text-magic-glow">const</span> <span className="text-white">engineer</span> = &#123; <br/>
-            <span className="text-gray-600 select-none">1 |</span> &nbsp;&nbsp;role: <span className="text-amber-200/70">"Full Stack & Backend Developer"</span>,<br/>
-            <span className="text-gray-600 select-none">2 |</span> &nbsp;&nbsp;focus: [<span className="text-amber-200/70">"Spring Boot"</span>, <span className="text-amber-200/70">"Microservices"</span>, <span className="text-amber-200/70">"Next.js"</span>],<br/>
-            <span className="text-gray-600 select-none">3 |</span> &nbsp;&nbsp;mission: <span className="text-amber-200/70">"Turning complex data logic into seamless systems."</span><br/>
+            {/* ESCAPED QUOTES AND AMPERSAND HERE */}
+            <span className="text-gray-600 select-none">1 |</span> &nbsp;&nbsp;role: <span className="text-amber-200/70">&quot;Full Stack &amp; Backend Developer&quot;</span>,<br/>
+            <span className="text-gray-600 select-none">2 |</span> &nbsp;&nbsp;focus: [<span className="text-amber-200/70">&quot;Spring Boot&quot;</span>, <span className="text-amber-200/70">&quot;Microservices&quot;</span>, <span className="text-amber-200/70">&quot;Next.js&quot;</span>],<br/>
+            <span className="text-gray-600 select-none">3 |</span> &nbsp;&nbsp;mission: <span className="text-amber-200/70">&quot;Turning complex data logic into seamless systems.&quot;</span><br/>
             &#125;;
           </p>
         </div>
